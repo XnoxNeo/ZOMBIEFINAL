@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletPistolA : MonoBehaviour
 {
     [Header("Variables")]
-    public float lifespan = 2f;
+    public float lifespan = 0.5f;
     public int damage = 4;
 
     [Header("SFX")]
@@ -30,6 +30,11 @@ public class BulletPistolA : MonoBehaviour
             HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
             healthSystem.TakeDamage(damage);
             Instantiate(sfxPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Wall"))
+        {
+           
             Destroy(gameObject);
         }
     }

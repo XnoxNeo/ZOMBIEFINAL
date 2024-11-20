@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - PowerUp
   - VendingMachine
+  - Wall
   layers:
   - Default
   - TransparentFX

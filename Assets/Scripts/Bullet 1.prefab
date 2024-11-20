@@ -360,6 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2579993a183f1b4fa7ab943b9532538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifespan: 2
+  lifespan: 0.25
   damage: 8
   sfxPrefab: {fileID: 4029532884407434015, guid: 0409cffc876a1f043a8b467af0eecad3, type: 3}
