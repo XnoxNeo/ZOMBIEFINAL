@@ -24,10 +24,7 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        if(currentWave > 5)
-        {
-            currentWave = 0;
-        }
+        
         
 
     }
@@ -49,10 +46,12 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Vector2 spawnPosition = new Vector2(Random.Range(0f, 5f), Random.Range(0f, 5f));
+        Vector3 spawnPosition = new Vector3(Random.Range(0f, 5f), Random.Range(0f, 5f), 0);
 
         int random = Random.Range(0, factoryList.Count);
-        Enemy enemy = factoryList[(int)random].CreateEnemy(spawnPosition);
+        int random2 = Random.Range(0, spawnPoints.Count);
+
+        Enemy enemy = factoryList[(int)random].CreateEnemy(spawnPoints[random2].position + spawnPosition);
         
     }
 

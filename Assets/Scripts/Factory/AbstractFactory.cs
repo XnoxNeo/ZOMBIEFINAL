@@ -7,5 +7,5 @@ public abstract class AbstractFactory : MonoBehaviour
     public abstract Enemy Enemy { get; set; }
     public string enemyType;
 
-    public abstract Enemy CreateEnemy(Vector2 position);
+    public abstract Enemy CreateEnemy(Vector3 position);
 }
