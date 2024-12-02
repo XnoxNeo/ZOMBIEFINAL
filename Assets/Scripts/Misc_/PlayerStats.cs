@@ -10,6 +10,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float damageMultiplier = 1.0f;
     public float DamageMultiplier => damageMultiplier;
 
+    [SerializeField] private float playerReload = 1.0f;
+    public float PlayerReload => playerReload;
+
 
     public void AddDamage(float addValue)
     {
@@ -21,6 +24,10 @@ public class PlayerStats : MonoBehaviour
         speed += addValue;
     }
 
+    public void AddWeaponRate(float addValue)
+    {
+        playerReload -= addValue;
+    }
 
 
 }

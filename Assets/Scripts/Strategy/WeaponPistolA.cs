@@ -12,6 +12,7 @@ public class WeaponPistolA : MonoBehaviour, IWeapon
     public GameObject bulletPrefab; 
     public Transform firePoint; 
     public float bulletSpeed = 20f;
+    
 
     [Header("Pick Up")]
     private bool isPickedUp = false;
@@ -22,6 +23,7 @@ public class WeaponPistolA : MonoBehaviour, IWeapon
 
     private void Update()
     {
+
         if (isPickedUp)
         {
             AimAtMouse();

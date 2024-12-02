@@ -7,18 +7,24 @@ public class Shooting : MonoBehaviour
     [Header("Weapon")]
     [SerializeField] public IWeapon weapon;
     private Transform playerTransform;
+    public float weaponRecharge;
+    private float timer;
 
-    
+    PlayerStats playerStats;
     private void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
         playerTransform = GetComponent<Transform>();
     }
 
     
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1")) 
+        timer += Time.deltaTime;
+
+        if (Input.GetButton("Fire1")&&timer > playerStats.PlayerReload) 
         {
+            timer = 0;
             weapon?.Shoot();
         }
     }
